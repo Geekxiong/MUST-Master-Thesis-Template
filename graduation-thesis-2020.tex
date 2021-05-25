@@ -1,0 +1,163 @@
+\documentclass[authoryear,a4paper,12pt,oneside]{report}
+\include{macros/style}
+\include{macros/usepackages}
+
+
+%==============================================================
+
+
+\usepackage[BoldFont, SlantFont, CJKchecksingle]{xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont[Mapping=tex-text]{STKaiti}
+\setCJKsansfont[Mapping=tex-text]{KaiTi}
+\setCJKmonofont[Mapping=tex-text]{KaiTi}
+
+\usepackage{hyperref}
+\usepackage{wallpaper}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[final]{pdfpages}
+%\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{enumerate}
+\usepackage{adjustbox}
+\usepackage{rotating}
+%\usepackage{cite}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{natbib}
+\usepackage{apalike}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage[top=2.5cm,left=3.8cm,bottom=2.5cm,right=2.5cm,headsep=0.2in]{geometry}
+
+
+
+\usepackage{caption}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{algpseudocode}
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\usepackage{wallpaper}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{enumerate}
+\usepackage{amsmath, amsfonts, amsthm, amssymb, amscd, verbatim, enumerate, bm}
+\usepackage{amsthm}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{booktabs}
+\usepackage[font={small}]{caption}
+\usepackage{stfloats}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\usepackage{makecell}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{flowchart}
+%设置文献的样式
+
+\usepackage{apalike}
+\bibliographystyle{apalike} 
+\setcitestyle{round,aysep={,},yysep={;}}
+
+%=============================================================
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat?s bookmarks
+%    pdftoolbar=true,        % show Acrobat?s toolbar?
+%    pdfmenubar=true,        % show Acrobat?s menu?
+%    pdffitwindow=false,     % window fit to page when opened
+%    pdfstartview={FitH},    % fits the width of the page to the window
+%    pdftitle={My title},    % title
+%    pdfauthor={Author},     % author
+%    pdfsubject={Subject},   % subject of the document
+%    pdfcreator={Creator},   % creator of the document
+%    pdfproducer={Producer}, % producer of the document
+%    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+%    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    %filecolor=magenta,      % color of file links
+    %urlcolor=cyan           % color of external links
+}
+
+%\floatname{algorithm}{Algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand {\thetable} {\thechapter{}-\arabic{table}} 
+\renewcommand {\thefigure} {\thechapter{}.\arabic{figure}}
+
+\newtheorem*{thm}{Theorem}
+\setlength{\parindent}{2em}
+
+%==============================================================
+
+%=============================================================
+\usepackage{titlesec}
+
+\newcommand{\chaptersize}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sectionsize}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\subsectionsize}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\chinesesize}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\chinesechaptersize}{\fontsize{22pt}{\baselineskip}}
+\renewcommand\bibname{Reference}
+
+\titleformat{\chapter}{\centering\chaptersize\bfseries}{Chapter\,\thechapter}{1em}{}
+\titleformat{\section}{\sectionsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\itshape\subsectionsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing{\chapter}{0pt}{0em}{1em}[0pt]
+\titlespacing{\section}{0pt}{2em}{1em}[0pt]
+\titlespacing{\subsection}{0pt}{1em}{0em}[0pt]
+
+%==============================================================
+
+
+
+\begin{document}
+\begin{spacing}{1.0}
+\CenterWallPaper{.50}{images/must-logo.jpg}
+
+\pagenumbering{Roman}
+\input{other_pages/title_page}
+\input{other_pages/declaration_page}
+\input{other_pages/abstract_ch}
+\input{other_pages/abstract_en}
+\input{other_pages/contents}
+\input{other_pages/figures_index}
+\input{other_pages/tables_index}
+
+\newpage
+\pagenumbering{arabic}
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+
+\include{other_pages/bib}
+\include{other_pages/acknowledgements}
+\include{other_pages/per}
+}\end{spacing}
+\end{document}

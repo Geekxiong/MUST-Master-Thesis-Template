@@ -1,0 +1,35 @@
+\pagestyle{fancy}
+
+\lhead{}
+\rhead{\footnotesize{Write your header}}
+\chapter{Chapter One}\label{cp1}
+\thispagestyle{fancy}
+
+
+Write your content here.
+
+\section{Section One}
+Section1, Section1, Section1, Section1. Here is an example of citing papers for you\citep{lou2020Whole}.
+
+
+\section{Section Two}
+Section2, Section2, Section2, Section2. Here is an example of table for you. Table.\ref{table.1.1}.
+\begin{table}[htbp]
+	\centering
+	\caption{DNA XOR operation}
+	\setlength{\tabcolsep}{6.5mm}{
+		\begin{tabular}{c|cccc}
+			\hline \hline
+			XOR   & \textbf{A} & \textbf{T} & \textbf{C} & \textbf{G} \\
+			\hline
+			\textbf{A} & A     & T     & C     & G \\
+			\hline
+			\textbf{T} & T     & A     & G     & C \\
+			\hline
+			\textbf{C} & C     & G     & A     & T \\
+			\hline
+			\textbf{G} & G     & C     & T     & A \\
+			\hline \hline
+	\end{tabular}}
+	\label{table.1.1}%
+\end{table}%
